@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Virtual | Mulheres Negras na Ciência e Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="header-museu">
+        <div class="container">
+            <span class="badge-museu">Acervo Digital & Exposição Virtual</span>
+            <h1>Legados na Ciência e Tecnologia</h1>
+            <p>Celebrando pioneiras e contemporâneas negras que transformaram a computação, a física espacial e as ciências exatas no Brasil e no mundo.</p>
+            <nav aria-label="Navegação do Museu">
+                <ul>
+                    <li><a href="#sobre">Sobre o Acervo</a></li>
+                    <li><a href="#galeria">Galeria de Pioneiras</a></li>
+                    <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
+                    <li><a href="#referencias">Referências</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Sobre o Projeto com Dados e Interatividade -->
+        <section id="sobre" class="container secao">
+            <h2>Reescrevendo a História da Inovação</h2>
+            <p class="texto-intro">
+                Historicamente, as contribuições fundamentais de mulheres negras para a tecnologia, matemática e engenharia foram apagadas dos livros didáticos. Este museu virtual existe para resgatar, documentar e dar visibilidade às mentes brilhantes que moldaram o mundo moderno.
+            </p>
+
+            <!-- Cards de Contexto e Impacto -->
+            <div class="grid-metricas">
+                <div class="metrica-item">
+                    <span class="metrica-numero">1969</span>
+                    <p>Ano em que os cálculos orbitais de Katherine Johnson guiaram a Apollo 11 até a Lua.</p>
+                </div>
+                <div class="metrica-item">
+                    <span class="metrica-numero">GPS</span>
+                    <p>Tecnologia global estruturada a partir da modelagem matemática da Terra feita por Gladys West.</p>
+                </div>
+                <div class="metrica-item">
+                    <span class="metrica-numero">1ª</span>
+                    <p>Mulher negra brasileira doutora em Física: Drª. Sonia Guimarães, referência em semicondutores.</p>
+                </div>
+            </div>
+
+            <div class="area-curiosidade">
+                <button id="btn-curiosidade" class="btn-interativo">✨ Descubra uma Curiosidade do Acervo</button>
+                <p id="exibicao-curiosidade" class="caixa-destaque" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- Galeria Interativa de Exposições (Cards) -->
+        <section id="galeria" class="container secao">
+            <h2>Galeria Permanente: Pioneiras & Contemporâneas</h2>
+            <p class="subtitulo-galeria">Selecione uma expositora para abrir o dossiê histórico completo, conquistas e legado.</p>
+            
+            <div class="grid-galeria">
+                
+                <!-- Expositor 1 -->
+                <article class="card-exposicao" onclick="abrirDossie('katherine')">
+                    <div class="img-container">
+                        <img src="img/Katherine_Jonson.jfif" alt="Retrato de Katherine Johnson, matemática da NASA" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <span class="tag-categoria">Matemática • Espacial (EUA)</span>
+                        <h3>Katherine Johnson</h3>
+                        <span class="periodo-vida">1918 – 2020</span>
+                        <p>A mente brilhante da NASA que garantiu a precisão das trajetórias orbitais nos voos espaciais mais decisivos da história.</p>
+                        <span class="clique-aviso">Abrir Dossiê Completo &rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Expositor 2 -->
+                <article class="card-exposicao" onclick="abrirDossie('gladys')">
+                    <div class="img-container">
+                        <img src="img/Gladys_West.jfif" alt="Retrato de Gladys West, matemática criadora da base do GPS" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <span class="tag-categoria">Matemática • Geodésia (EUA)</span>
+                        <h3>Drª. Gladys West</h3>
+                        <span class="periodo-vida">1930 – Presente</span>
+                        <p>Seus algoritmos de modelagem da superfície terrestre criaram a base matemática para o Sistema de Posicionamento Global (GPS).</p>
+                        <span class="clique-aviso">Abrir Dossiê Completo &rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Expositor 3 -->
+                <article class="card-exposicao" onclick="abrirDossie('sonia')">
+                    <div class="img-container">
+                        <img src="img/Sonia_guimaraes.jfif" alt="Retrato da Drª. Sonia Guimarães, física e professora do ITA" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <span class="tag-categoria">Física • Semicondutores (Brasil)</span>
+                        <h3>Drª. Sonia Guimarães</h3>
+                        <span class="periodo-vida">1957 – Presente</span>
+                        <p>Primeira mulher negra brasileira doutora em Física, docente no ITA e referência na luta pela equidade racial e de gênero nas exatas.</p>
+                        <span class="clique-aviso">Abrir Dossiê Completo &rarr;</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Seção Linha do Tempo -->
+        <section id="linha-do-tempo" class="secao-alternativa">
+            <div class="container">
+                <h2>Marcos Históricos na Ciência</h2>
+                <p class="subtitulo-galeria">Uma breve cronologia de rupturas e conquistas protagonizadas por mulheres negras.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-ano">1953</span>
+                        <div class="timeline-conteudo">
+                            <h4>Ingresso na NACA (atual NASA)</h4>
+                            <p>Katherine Johnson inicia sua carreira no grupo de "computadores humanos" de West Area, rompendo barreiras de segregação racial e de gênero.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-ano">1978</span>
+                        <div class="timeline-conteudo">
+                            <h4>Projeto Seasat e Satélites Oceânicos</h4>
+                            <p>Gladys West torna-se gerente de projeto do Seasat, o primeiro satélite capaz de monitorar os oceanos remotamente com alta precisão.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-ano">1989</span>
+                        <div class="timeline-conteudo">
+                            <h4>Doutorado em Materiais Eletrônicos</h4>
+                            <p>Sonia Guimarães conclui seu PhD na University of Manchester Institute of Science and Technology (Inglaterra), tornando-se pioneira no Brasil.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-ano">1993</span>
+                        <div class="timeline-conteudo">
+                            <h4>Docência no Instituto Tecnológico de Aeronáutica (ITA)</h4>
+                            <p>Sonia Guimarães ingressa como professora no ITA em um período em que a instituição ainda não aceitava mulheres como alunas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal / Dossiê Interativo Expandido -->
+        <div id="modal-dossie" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <div class="modal-caixa">
+                <button id="fechar-modal" class="btn-fechar" aria-label="Fechar dossiê">&times;</button>
+                
+                <div class="modal-header-info">
+                    <img id="modal-img" src="" alt="" class="modal-avatar">
+                    <div>
+                        <span id="modal-categoria" class="tag-categoria"></span>
+                        <h3 id="modal-titulo"></h3>
+                        <p id="modal-periodo" class="modal-subtitulo"></p>
+                    </div>
+                </div>
+
+                <div class="modal-corpo">
+                    <p id="modal-descricao"></p>
+                    
+                    <h4>Principais Conquistas & Contribuições</h4>
+                    <ul id="modal-conquistas" class="lista-conquistas"></ul>
+
+                    <blockquote id="modal-citacao" class="citacao-destaque"></blockquote>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé com Referências Bibliográficas e Links Clicáveis -->
+    <footer id="referencias" class="footer-museu">
+        <div class="container">
+            <h3>Referências Bibliográficas & Acervo Documental</h3>
+            <p>Fontes de pesquisa acadêmica e institucional consultadas para a curadoria deste museu virtual:</p>
+            <ul class="lista-referencias">
+                <li><a href="https://history.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA History Program Office — Biografia Oficial de Katherine Johnson</a></li>
+                <li><a href="https://www.afspc.af.mil/" target="_blank" rel="noopener noreferrer">Air Force Space Command — Hall da Fama e o Legado de Drª. Gladys West</a></li>
+                <li><a href="https://www.geledes.org.br/" target="_blank" rel="noopener noreferrer">Geledés Instituto da Mulher Negra — Acervo sobre Cientistas Negras Brasileiras</a></li>
+                <li><a href="https://www.gov.br/cnpq/" target="_blank" rel="noopener noreferrer">Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) — Pioneiras da Ciência no Brasil</a></li>
+            </ul>
+            <p class="copyright">&copy; 2026 Museu Virtual da Consciência Negra. Projeto educativo desenvolvido em HTML5, CSS3 e JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

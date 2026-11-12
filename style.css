@@ -1,0 +1,523 @@
+:root {
+    --cor-fundo: #0f111a;
+    --cor-superficie: #1a1d2d;
+    --cor-primaria: #f39c12; /* Dourado / Museu */
+    --cor-primaria-hover: #d68910;
+    --cor-texto: #e2e8f0;
+    --cor-texto-suave: #94a3b8;
+    --cor-card: #24283b;
+    --cor-borda: #2d3348;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header do Museu */
+.header-museu {
+    background: radial-gradient(circle at top, #1e2336 0%, #090a0f 100%);
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 4.5rem 0 3.5rem 0;
+    text-align: center;
+}
+
+.badge-museu {
+    display: inline-block;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--cor-primaria);
+    background-color: rgba(243, 156, 18, 0.12);
+    border: 1px solid rgba(243, 156, 18, 0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+}
+
+.header-museu h1 {
+    font-size: 2.9rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.header-museu p {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--cor-texto-suave);
+    font-size: 1.15rem;
+    max-width: 680px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.header-museu nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.header-museu nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.header-museu nav a:hover {
+    color: var(--cor-primaria);
+    border-bottom-color: var(--cor-primaria);
+}
+
+/* Seções Gerais */
+.secao {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.secao-alternativa {
+    background-color: #131622;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.secao h2, .secao-alternativa h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.texto-intro {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    max-width: 760px;
+    margin: 0 auto 3rem auto;
+    color: var(--cor-texto-suave);
+    font-size: 1.1rem;
+}
+
+/* Métricas / Destaques Numéricos */
+.grid-metricas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 3.5rem;
+}
+
+.metrica-item {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 28px 22px;
+    transition: border-color 0.3s;
+}
+
+.metrica-item:hover {
+    border-color: var(--cor-primaria);
+}
+
+.metrica-numero {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+}
+
+.metrica-item p {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* Área de Curiosidade Interativa */
+.area-curiosidade {
+    background-color: var(--cor-superficie);
+    border: 1px dashed var(--cor-primaria);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.btn-interativo {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--cor-primaria);
+    color: #0f111a;
+    border: none;
+    padding: 13px 26px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-interativo:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+}
+
+.caixa-destaque {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin-top: 1.2rem;
+    font-size: 1.05rem;
+    color: var(--cor-texto);
+    min-height: 28px;
+}
+
+/* Galeria de Cards */
+.subtitulo-galeria {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--cor-texto-suave);
+    margin-bottom: 3.5rem;
+    font-size: 1.05rem;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    text-align: left;
+}
+
+.card-exposicao {
+    background-color: var(--cor-card);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.card-exposicao:hover {
+    transform: translateY(-6px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* Enquadramento ideal para retratos */
+.img-container {
+    width: 100%;
+    height: 320px; /* Altura maior para valorizar retratos verticais/quadrados */
+    background-color: #151824;
+    overflow: hidden;
+    border-bottom: 2px solid var(--cor-borda);
+}
+
+.card-exposicao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%; /* Foca na parte superior/rosto evitando cortar a cabeça */
+    transition: transform 0.4s ease;
+}
+
+.card-exposicao:hover img {
+    transform: scale(1.04);
+}
+
+.card-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tag-categoria {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.72rem;
+    background-color: rgba(243, 156, 18, 0.15);
+    color: var(--cor-primaria);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-info h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+}
+
+.periodo-vida {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.85rem;
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.card-info p {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.clique-aviso {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.88rem;
+    color: var(--cor-primaria);
+    font-weight: bold;
+    border-top: 1px solid var(--cor-borda);
+    padding-top: 12px;
+}
+
+/* Linha do Tempo */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    border-left: 2px solid var(--cor-primaria);
+    padding-left: 28px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    border: 2px solid var(--cor-fundo);
+}
+
+.timeline-ano {
+    display: inline-block;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--cor-primaria);
+    margin-bottom: 4px;
+}
+
+.timeline-conteudo h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.timeline-conteudo p {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* Modal Dossiê Completo */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-caixa {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-primaria);
+    padding: 36px;
+    border-radius: 10px;
+    max-width: 660px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 15%;
+    border: 2px solid var(--cor-primaria);
+    flex-shrink: 0;
+}
+
+.modal-caixa h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.modal-subtitulo {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+    margin-top: 4px;
+}
+
+.modal-corpo p {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--cor-texto);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+.modal-corpo h4 {
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.lista-conquistas {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+    color: var(--cor-texto-suave);
+}
+
+.lista-conquistas li {
+    margin-bottom: 8px;
+}
+
+.citacao-destaque {
+    background-color: rgba(243, 156, 18, 0.08);
+    border-left: 3px solid var(--cor-primaria);
+    padding: 14px 18px;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 0.98rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btn-fechar:hover {
+    color: var(--cor-primaria);
+}
+
+/* Rodapé */
+.footer-museu {
+    background-color: #090a0f;
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.footer-museu h3 {
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+.footer-museu p {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+}
+
+.lista-referencias {
+    list-style: none;
+    margin: 1.8rem 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.lista-referencias li {
+    margin-bottom: 10px;
+}
+
+.lista-referencias a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.lista-referencias a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 2.5rem;
+    border-top: 1px solid #1a1d2d;
+    padding-top: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .header-museu h1 {
+        font-size: 2.1rem;
+    }
+
+    .modal-header-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal-caixa {
+        padding: 24px;
+    }
+}
