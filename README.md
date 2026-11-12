@@ -47,27 +47,6 @@ museu-virtual-mulheres-negras/
     └── Sonia_guimaraes.jfif
 ```
 
----
-
-## 🚀 Como Executar e Publicar no GitHub Pages
-
-### Executar localmente
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-   ```
-2. Acesse a pasta do projeto e abra o arquivo `index.html` diretamente no seu navegador de preferência (ou utilize a extensão *Live Server* no VS Code).
-
-### Hospedar gratuitamente via GitHub Pages
-1. Envie todos os arquivos (`index.html`, `style.css`, `script.js`, `README.md` e a pasta `img/`) para o seu repositório no GitHub.
-2. No repositório, clique na aba **Settings** (Configurações).
-3. No menu lateral esquerdo, selecione **Pages**.
-4. Em **Source** (Origem), escolha `Deploy from a branch`.
-5. Selecione a branch `main` (ou `master`), deixe a pasta como `/ (root)` e clique em **Save**.
-6. Aguarde alguns instantes e o link público do seu Museu Virtual aparecerá no topo da página!
-
----
-
 ## 📚 Fontes e Referências Documentais
 
 * [NASA History Program Office](https://history.nasa.gov/)
@@ -77,6 +56,13 @@ museu-virtual-mulheres-negras/
 
 ---
 
+## 👥 Participantes
+Dos alunos do 2ª ano A Técnico em Desenvolvimento de Sistemas:
+* Fernando Alves de Lima
+* Jairo Lopes da Silva Júnior
+
+--- 
+
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins educativos e de divulgação científica. Sinta-se à vontade para estudar, adaptar e compartilhar mantendo os devidos créditos.
+Este projeto foi desenvolvido para fins educativos e de divulgação científica. Sinta-se à vontade para estudar e compartilhar mantendo os devidos créditos.
